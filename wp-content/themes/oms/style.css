@@ -68,6 +68,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 @import url('css/bootstrap.min.css');
+@import url('css/slick.css');
 
 body{
 	font-family: 'Lexend';
@@ -89,6 +90,11 @@ body{
 }
 .content-padding-lg{
 	padding:200px 0px;
+}
+
+.content-margin-sm{
+	margin-top:20px;
+	margin-bottom:20px;
 }
 
 .brand-text-color{
@@ -194,9 +200,19 @@ h2{
 	font-size:40px;
 	position:relative;
 }
+
+h2 span{
+	font-weight:200;
+	display:block;
+}
+
+
 h3{
 	font-size:24px;
 	position:relative;
+}
+h5{
+	font-size: 16px;
 }
 
 .headingLine:after{
@@ -430,5 +446,97 @@ h3{
 	max-width: 220px;
 	margin-bottom: 30px;
 }
+
+.slick-slider .slick-arrow{
+	position: absolute;
+	bottom: -50px;
+	left: 58%;
+	width: 40px;
+	height: 40px;
+	border: 1px solid;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	font-size: 16px;
+	margin: auto;
+	cursor:pointer;
+}
+
+.slick-slider .fa-arrow-left.slick-arrow{
+	display: block;
+	right: 45%;
+	left: initial;
+}
+
+
+.slick-slider .slick-arrow:hover{
+	border-width:2px;
+}
+
+
+.slide-item-info{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.slide-item-info li{
+	margin: 8px 0px;
+	font-weight: 300;
+}
+
+
+.oms-tc-home-practice p{
+	max-width: 350px;
+	margin: 40px 0px;
+	margin-bottom: 60px;
+}
+
+.text-ourlay-block{
+    background-image: url(https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/dsfssf.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 450px;
+    margin: 50px 0px;
+    padding-top: 300px;
+	position:relative;
+}
+
+.text-ourlay-block:before{
+	content:'';
+	background-image: url(https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Path-22884.png);
+    background-position: center;
+    background-size: cover;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.text-ourlay-block p,
+.text-ourlay-block h4{
+	position:relative;
+}
+
+.text-ourlay-block h4{
+	font-size: 18px;
+}
+
+.bigText{
+	font-size: 140px;
+    font-weight: 600;
+    line-height: 1;
+    color: #72C8F1;
+}  
+
+.full-width-bg{
+	background-image: url(https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Group-18157.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
 
 
