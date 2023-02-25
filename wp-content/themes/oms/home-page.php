@@ -166,6 +166,107 @@ get_header();
 </section>
 
 
+<section class="gray-bg-color oms-tc-home-healthcare mb-5">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Mask-Group-12713.png" />
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-5">
+				<h4>OMS in healthcare</h4>
+				<h5>Our platform helps institutions</h5>
+				<ul class="dot-list">
+					<li>Eliminate bias in recruit</li>
+					<li>Onboard</li>
+					<li>Train & Assess</li>
+					<li>Upskill & Reskill</li>
+					<li>Retain workforce</li>
+					<li>Save costs</li>
+				</ul>
+				<a href="#" class="btn btn-primary">Learn more about OMS for healthcare <i class="fa fa-angle-right"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="gray-bg-color oms-tc-home-healthcare content-margin-sm">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+
+			<div class="col-md-1"></div>
+			<div class="col-md-5">
+				<h4>OMS in higher education</h4>
+				<h5>Our platform helps institutions</h5>
+				<ul class="dot-list">
+					<li>Eliminate bias</li>
+					<li>Scale your teaching</li>
+					<li>Map & track competency</li>
+					<li>Standardize feedback</li>
+					<li>Reduce pressure on faculty</li>
+					<li>Save costs</li>
+				</ul>
+				<a href="#" class="btn btn-primary">Learn more about OMS for education <i class="fa fa-angle-right"></i></a>
+			</div>
+			<div class="col-md-6">
+				<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Mask-Group-12714.png" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="brand-bg-color content-padding content-margin-sm oms-tc-home-working">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				 <h3>Working with OMS <img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Group-16641.svg" /></h3>
+				
+				<div class="workingSlider">
+					<div class="slideItem">
+						<div class="row">
+							<div class="col-md-8"><p class="p-md">The OMS system allows us to integrate theory into practice in a really meaningful manner, allowing progression throughout nurses’ academic careers.</p><p><b>Simulation Lead</b>University of Northampton School of Nursing</p></div>
+							<div class="col-md-1"></div>
+							<div class="col-md-3"><img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/UniversityOfNorthamptonLogo-copy.png" /></div>
+						</div>
+					</div>
+					<div class="slideItem">
+						<div class="row">
+							<div class="col-md-8"><p class="p-md">The OMS system allows us to integrate theory into practice in a really meaningful manner, allowing progression throughout nurses’ academic careers.</p><p><b>Simulation Lead</b>University of Northampton School of Nursing</p></div>
+							<div class="col-md-1"></div>
+							<div class="col-md-3"><img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/UniversityOfNorthamptonLogo-copy.png" /></div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-2">
+				 <div class="number-lg">87%</div>
+				<h5>Improvement in skills in a three month period</h5>
+				<p>Case study: <br><a href="#">University of Nottingham</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="content-padding oms-tc-home-trusted">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-3">
+				<h4 class="headingLine">Our trusted partners <span>to name a few</span></h4>
+				<div class="space-sm"></div>
+				<p>We work with organizations at every stage in their virtual, e-learning healthcare training journey. Our support and success teams are highly experienced in developing, deploying and integrating our software for maximum impact whether you are just starting out or at the cutting edge of what this technology allows.</p><p>We are a team of clinical, educational and technical experts who understand the nuances, priorities and pressures of working in healthcare. </p>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				 <img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Group-16316.png" />
+			</div>
+		</div>
+	</div>
+</section>
+
+
 
 <?php
 get_footer();
