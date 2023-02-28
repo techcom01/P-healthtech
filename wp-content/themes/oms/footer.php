@@ -31,13 +31,15 @@
 				</div>
 			</div>
 			<div class="col-md-3">
+
+				<?php if( have_rows('footer_right_links', 'option') ): ?>
 				<ul class="footer-social">
 					<li><a href="#">Cookie Policy</a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<?php while( have_rows('footer_right_links', 'option') ): the_row(); ?>
+					<li><a href="<?php the_sub_field('icon_link', 'option'); ?>"><?php the_sub_field('icon_select', 'option'); ?></a></li>
+					<?php endwhile; ?>
 				</ul>
+				<?php endif; ?>
 			</div>
 		</div>
 
@@ -45,7 +47,7 @@
 
 		<div class="row mt-5">
 			<div class="col-md-12">
-				<div class="copyRight">Oxford Medical Simulation © 2016-2022</div>
+				<div class="copyRight"><?php the_field('footer_copyright', 'option'); ?></div>
 			</div>
 		</div>
 

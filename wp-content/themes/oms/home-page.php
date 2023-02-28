@@ -16,26 +16,33 @@
 get_header();
 ?>
 
-<section class="oms-tc-home-banner">
+
+<?php if( have_rows('home_page_section') ): ?>
+<?php while( have_rows('home_page_section') ): the_row(); ?>
+
+<?php if( get_row_layout() == 'hero_banner_section' ): ?>
+
+<section class="oms-tc-home-banner" style="background-image:url('<?php the_sub_field('hero_image'); ?>');">
 	<div class="container position-relative">
 		<div class="row align-items-center">
 			<div class="col-md-6">
-				<h1>The evolution of clinical excellence</h1>
-				<p>VR healthcare education and training</p>
-				<a href="#" class="btn btn-primary">Book a demo <i class="fa fa-angle-right"></i></a>
+				<h1><?php the_sub_field('hero_title'); ?></h1>
+				<p><?php the_sub_field('hero_text'); ?></p>
+				<a href="<?php the_sub_field('hero_cta_link'); ?>" class="btn btn-primary"><?php the_sub_field('hero_cta_text'); ?> <i class="fa fa-angle-right"></i></a>
 			</div>
 			<div class="col-md-6"><div class="space-full-hight"></div></div>
 		</div>
 	</div>
 </section>
 
+<?php elseif( get_row_layout() == 'training_banner_section' ): ?>
 
 <section class="oms-tc-home-training brand-bg-color content-padding-lg">
 	<div class="container position-relative">
 		<div class="row align-items-center">
 			<div class="col-md-7">
-				<h2 class="headingLine">Healthcare education and training tailored to your needs</h2>
-				<p class="p-lg">We deliver unparalleled virtual healthcare simulation</p>
+				<h2 class="headingLine"><?php the_sub_field('heading'); ?></h2>
+				<p class="p-lg"><?php the_sub_field('sub_heading'); ?></p>
 			</div>
 			<div class="col-md-6"></div>
 		</div>
@@ -47,149 +54,129 @@ get_header();
 	</div>
 </section>
 
+<?php elseif( get_row_layout() == 'delivering_section' ): ?>
 
-<section class="oms-tc-home-delivering brand-bg-color content-padding-lg">
+<section class="oms-tc-home-delivering brand-bg-color content-padding-lg" style="background-image:url('<?php the_sub_field('bg_image'); ?>');">
 	<div class="container position-relative">
 		<div class="row align-items-center">
 			<div class="col-md-4">
 				<div class="max-width-sm">
-					<h2 class="headingLine">Delivering value for everyone in healthcare</h2>
-					<p>The learning platform to build competence and confidence in professional healthcare and higher education settings</p>
+					<h2 class="headingLine"><?php the_sub_field('heading'); ?></h2>
+					<p><?php the_sub_field('text'); ?></p>
 					<div class="space-sm"></div>
-					<p class="p-md"><strong>Explore the depth and breadth of our platform</strong></p>
-					<a href="#" class="btn btn-primary">Explore our platform <i class="fa fa-angle-right"></i></a>
+					<p class="p-md"><strong><?php the_sub_field('sub_text'); ?></strong></p>
+					<a href="<?php the_sub_field('cta_link'); ?>" class="btn btn-primary"><?php the_sub_field('cta_text'); ?> <i class="fa fa-angle-right"></i></a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
+<?php elseif( get_row_layout() == 'practice_section' ): ?>
 
 <section class="oms-tc-home-practice brand-bg-color content-padding">
 	<div class="container position-relative">
 		<div class="row align-items-center">
 			<div class="col-md-6">
-				<h2 class="headingLine">Practice anywhere, anytime, <span>on-screen or in VR</span></h2>
-				<p>OMS gives you the best of both worlds. We deliver our unparalleled training simulation with the immersion of in-headset experience and the accessibility of in-browser web-based training.</p>
-				<h5>Engage with our platform in myriad ways:</h5>
-				<ul class="slide-item-info">
-					<li>On screen individual practice at home</li>
-					<li>Virtual reality scenarios in hospitals</li>
-					<li>On screen practice in groups at university</li>
-				</ul>
-			</div>
-			<div class="col-md-6">
-				<div class="singleSlider">
-					<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/slide.png" />
-					<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/slide1.png" />
-					<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/slide2.png" />
-					<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/slide3.png" />
-				</div>
-			</div>
+				<h2 class="headingLine"><?php the_sub_field('heading'); ?></span></h2>
+			<p><?php the_sub_field('sub_heading'); ?></p>
+			<?php the_sub_field('slide_item'); ?>
 		</div>
+		<div class="col-md-6">
+
+			<?php if( have_rows('image_slider') ): ?>
+			<div class="singleSlider">
+				<?php while( have_rows('image_slider') ): the_row(); ?>
+				<img src="<?php the_sub_field('slider_img'); ?>" />
+				<?php endwhile; ?>
+			</div>
+			<?php endif; ?>
+		</div>
+	</div>
 	</div>
 </section>
 
-
-
+<?php elseif( get_row_layout() == 'putting_section' ): ?>
 
 <section class="oms-tc-home-putting brand-bg-color content-padding">
 	<div class="container position-relative">
 		<div class="row align-items-center">
 			<div class="col-md-6">
-				<h2 class="headingLine">Putting knowledge into practice <span>Developing real-world skills</span></h2>
+				<h2 class="headingLine"><?php the_sub_field('heading'); ?></h2>
 			</div>
 		</div>
 		<div class="row">
+
+			<?php if( have_rows('block_repeater') ): ?>
+			<?php while( have_rows('block_repeater') ): the_row(); ?>
 			<div class="col-md-3">
-				<div class="text-ourlay-block">
-					<h4>Individual training</h4>
-					<p>Fly solo and practice your decision-making to build competence and confidence through myriad scenarios</p>
+				<div class="text-ourlay-block" style="background-image:url('<?php the_sub_field('block_image'); ?>');">
+					<h4><?php the_sub_field('block_heading'); ?></h4>
+					<p><?php the_sub_field('block_text'); ?></p>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="text-ourlay-block">
-					<h4>Interprofessional training</h4>
-					<p>Practice your team communication skills  through a range of realistic group-scenarios</p>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="text-ourlay-block">
-					<h4>Touch training</h4>
-					<p>Get to grips with procedures with VR and hand controllers in highly immersive scenarios to develop your motor skills</p>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="text-ourlay-block">
-					<h4>Communication training</h4>
-					<p>Develop your communication skills with AI-driven patients who respond intuitively to your vocal commands and actions</p>
-				</div>
-			</div>
+			<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<a href="#" class="btn btn-primary">Explore our platform <i class="fa fa-angle-right"></i></a>
+				<a href="<?php the_sub_field('block_cta_link'); ?>" class="btn btn-primary"><?php the_sub_field('block_cta_text'); ?> <i class="fa fa-angle-right"></i></a>
 			</div>
 		</div>
 	</div>
 </section>
 
+<?php elseif( get_row_layout() == 'optimizing_section' ): ?>
+
 <section class="brand-bg-color">
 	<div class="container position-relative">
 		<div class="row align-items-center">
 			<div class="col-md-6">
-				<h2 class="headingLine">Optimizing healthcare performance, together</h2>
+				<h2 class="headingLine"><?php the_sub_field('heading'); ?></h2>
 			</div>
 		</div>
 		<div class="row align-items-center">
 			<div class="col-md-3"></div>
 			<div class="col-md-6 text-center">
-				<h3>VR is</h3>
-				<div class="bigText">83%</div>
-				<h3>less expensive </h3>
+				<?php the_sub_field('center_content'); ?>
 			</div>
 		</div>
 	</div>
 	<div class="space"></div>
 </section>
 
-<section class="brand-bg-color full-width-bg content-padding content-margin-sm">
+<?php elseif( get_row_layout() == 'full_width_banner' ): ?>
+
+<section class="brand-bg-color full-width-bg content-padding content-margin-sm" style="background-image:url('<?php the_sub_field('banner_image'); ?>');">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-md-6">
-				<h2>Delivering tailored and integrated solutions in healthcare & education</h2>
+				<h2><?php the_sub_field('heading'); ?></h2>
 				<div class="space-sm"></div>
-				<p class="p-lg">Learn how we support you to succeed</p>
+				<p class="p-lg"><?php the_sub_field('sub_heading'); ?></p>
 			</div>
 		</div>
 	</div>
 </section>
 
+<?php elseif( get_row_layout() == 'two_col_left_image_section' ): ?>
 
 <section class="gray-bg-color oms-tc-home-healthcare mb-5">
 	<div class="container-fluid">
 		<div class="row align-items-center">
 			<div class="col-md-6">
-				<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Mask-Group-12713.png" />
+				<img src="<?php the_sub_field('left_image'); ?>" />
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-5">
-				<h4>OMS in healthcare</h4>
-				<h5>Our platform helps institutions</h5>
-				<ul class="dot-list">
-					<li>Eliminate bias in recruit</li>
-					<li>Onboard</li>
-					<li>Train & Assess</li>
-					<li>Upskill & Reskill</li>
-					<li>Retain workforce</li>
-					<li>Save costs</li>
-				</ul>
-				<a href="#" class="btn btn-primary">Learn more about OMS for healthcare <i class="fa fa-angle-right"></i></a>
+				<?php the_sub_field('right_content'); ?>
+				<a href="<?php the_sub_field('block_cta_link'); ?>" class="btn btn-primary"><?php the_sub_field('block_cta_text'); ?> <i class="fa fa-angle-right"></i></a>
 			</div>
 		</div>
 	</div>
 </section>
 
+<?php elseif( get_row_layout() == 'two_col_right_image_section' ): ?>
 
 <section class="gray-bg-color oms-tc-home-healthcare content-margin-sm">
 	<div class="container-fluid">
@@ -197,74 +184,72 @@ get_header();
 
 			<div class="col-md-1"></div>
 			<div class="col-md-5">
-				<h4>OMS in higher education</h4>
-				<h5>Our platform helps institutions</h5>
-				<ul class="dot-list">
-					<li>Eliminate bias</li>
-					<li>Scale your teaching</li>
-					<li>Map & track competency</li>
-					<li>Standardize feedback</li>
-					<li>Reduce pressure on faculty</li>
-					<li>Save costs</li>
-				</ul>
-				<a href="#" class="btn btn-primary">Learn more about OMS for education <i class="fa fa-angle-right"></i></a>
+				<?php the_sub_field('left_content'); ?>
+				<a href="<?php the_sub_field('block_cta_link'); ?>" class="btn btn-primary"><?php the_sub_field('block_cta_text'); ?> <i class="fa fa-angle-right"></i></a>
 			</div>
 			<div class="col-md-6">
-				<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Mask-Group-12714.png" />
+				<img src="<?php the_sub_field('right_image'); ?>" />
 			</div>
 		</div>
 	</div>
 </section>
+
+<?php elseif( get_row_layout() == 'working_section' ): ?>
 
 <section class="brand-bg-color content-padding content-margin-sm oms-tc-home-working">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				 <h3>Working with OMS <img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Group-16641.svg" /></h3>
-				
+				<h3><?php the_sub_field('heading'); ?> <img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Group-16641.svg" /></h3>
+
 				<div class="workingSlider">
+
+					<?php if( have_rows('left_slider') ): ?>
+					<?php while( have_rows('left_slider') ): the_row(); ?>
+					
 					<div class="slideItem">
 						<div class="row">
-							<div class="col-md-8"><p class="p-md">The OMS system allows us to integrate theory into practice in a really meaningful manner, allowing progression throughout nurses’ academic careers.</p><p><b>Simulation Lead</b>University of Northampton School of Nursing</p></div>
+							<div class="col-md-8"><?php the_sub_field('slider_text'); ?></div>
 							<div class="col-md-1"></div>
-							<div class="col-md-3"><img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/UniversityOfNorthamptonLogo-copy.png" /></div>
+							<div class="col-md-3"><img src="<?php the_sub_field('slider_image'); ?>" /></div>
 						</div>
 					</div>
-					<div class="slideItem">
-						<div class="row">
-							<div class="col-md-8"><p class="p-md">The OMS system allows us to integrate theory into practice in a really meaningful manner, allowing progression throughout nurses’ academic careers.</p><p><b>Simulation Lead</b>University of Northampton School of Nursing</p></div>
-							<div class="col-md-1"></div>
-							<div class="col-md-3"><img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/UniversityOfNorthamptonLogo-copy.png" /></div>
-						</div>
-					</div>
+
+					<?php endwhile; ?>
+					<?php endif; ?>
+
 				</div>
-				
+
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-2">
-				 <div class="number-lg">87%</div>
-				<h5>Improvement in skills in a three month period</h5>
-				<p>Case study: <br><a href="#">University of Nottingham</a></p>
+				<?php the_sub_field('right_content'); ?>
 			</div>
 		</div>
 	</div>
 </section>
 
+<?php elseif( get_row_layout() == 'partners_section' ): ?>
+
 <section class="content-padding oms-tc-home-trusted">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-md-3">
-				<h4 class="headingLine">Our trusted partners <span>to name a few</span></h4>
+				<h4 class="headingLine"><?php the_sub_field('left_heading'); ?></h4>
 				<div class="space-sm"></div>
-				<p>We work with organizations at every stage in their virtual, e-learning healthcare training journey. Our support and success teams are highly experienced in developing, deploying and integrating our software for maximum impact whether you are just starting out or at the cutting edge of what this technology allows.</p><p>We are a team of clinical, educational and technical experts who understand the nuances, priorities and pressures of working in healthcare. </p>
+				<?php the_sub_field('left_content'); ?>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-8">
-				 <img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Group-16316.png" />
+				<img src="<?php the_sub_field('right_image'); ?>" />
 			</div>
 		</div>
 	</div>
 </section>
+
+<?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
 
 
 
