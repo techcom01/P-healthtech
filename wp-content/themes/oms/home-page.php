@@ -23,6 +23,10 @@ get_header();
 <?php if( get_row_layout() == 'hero_banner_section' ): ?>
 
 <section class="oms-tc-home-banner" style="background-image:url('<?php the_sub_field('hero_image'); ?>');">
+	<div class="vimeo-wrapper">
+   <iframe src="https://player.vimeo.com/video/769371382?background=1&autoplay=1&loop=1&byline=0&title=0"
+           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 	<div class="container position-relative">
 		<div class="row align-items-center">
 			<div class="col-md-6">
@@ -37,7 +41,13 @@ get_header();
 
 <?php elseif( get_row_layout() == 'training_banner_section' ): ?>
 
-<section class="oms-tc-home-training brand-bg-color content-padding-lg">
+
+<section class="oms-tc-home-training brand-bg-color" style="padding-top:150px;">
+<?php echo do_shortcode('[scrollsequence id="393"]'); ?>
+</section>
+
+
+<!--<section class="oms-tc-home-training brand-bg-color content-padding-lg">
 	<div class="container position-relative">
 		<div class="row align-items-center">
 			<div class="col-md-7">
@@ -52,7 +62,7 @@ get_header();
 		<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Mask-Group-17360.png" class="centerImage" />
 		<img src="https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Mask-Group-17358.png" class="rightImage" />
 	</div>
-</section>
+</section> -->
 
 <?php elseif( get_row_layout() == 'delivering_section' ): ?>
 
