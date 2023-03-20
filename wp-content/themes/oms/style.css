@@ -129,6 +129,8 @@ img{
 
 .menu li{
 	margin-left: 50px;
+	font-size: 12px;
+	line-height: 25px;
 }
 
 .menu li a{
@@ -305,7 +307,7 @@ h4.headingLine:after{
 
 
 .footer-form{
-	background-image:url('https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Mask-Group-12621.png');
+	background-image:url('http://themetest.tech/wp-content/uploads/2023/02/Mask-Group-12621.png');
 	background-color:#090D29;
 	position:relative;
 	color:#fff;
@@ -410,7 +412,7 @@ h4.headingLine:after{
 /* home page sections css */
 
 .oms-tc-home-banner{
-	background-image:url('https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Mask-Group-12588.png');
+	background-image:url('http: //themetest.tech/wp-content/uploads/2023/02/Mask-Group-12588.png');
 	background-size:cover;
 	background-position:center;
 	position:relative;
@@ -476,7 +478,7 @@ h4.headingLine:after{
 }
 
 .oms-tc-home-delivering{
-	background-image:url('https://onlinewebsolutions.in/oms/wp-content/uploads/2023/02/Component-245-–-1.png');
+	background-image:url('http: //themetest.tech/wp-content/uploads/2023/02/Component-245-–-1.png');
 	background-size:cover;
 	background-position:center;
 }
@@ -756,7 +758,84 @@ h4.headingLine:after{
 	color: #fff;
 	line-height: 40px;
 	font-weight: 100;
+	font-size: 14px;
 }
 .newbtn .elementor-button span{
 	align-items: center;
+}
+
+.newbtn:hover .elementor-button-icon{
+	background-color: #FFFFFF;
+	color: #090D29;
+}
+
+.arrowBtn .elementor-button-icon{
+	width: 40px;
+	height: 40px;
+	border: 1px solid;
+	line-height: 40px;
+	border-radius: 50%;
+}
+
+.underLine .elementor-heading-title{
+	position:relative;
+}
+.underLine .elementor-heading-title:after{
+	content: '';
+	width: 75px;
+	display: block;
+	height: 2px;
+	background-color: #8CC0F0;
+}
+
+.case-study-list .e-loop-item:nth-child(2n + 1) .elementor-container.elementor-column-gap-default{
+	flex-direction: row-reverse;
+}
+
+.notfound{
+	background-image: url(http://themetest.tech/wp-content/uploads/2023/03/Group-16665.png);
+	background-color: #090D29;
+	color: #fff;
+	background-position: center;
+	background-size: cover;
+	position:relative;
+}
+
+.notfound:before{
+	content: '';
+	background-color: #090D29;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(9,13,41,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(9,13,41,1) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(9,13,41,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#090d29',GradientType=1 );
+}
+
+.notfound h1{
+	color: #9DC7F4;
+	font-size: 60px;
+	margin-bottom: 40px;
+}
+.notfound h2{
+	color: #fff;
+	font-size: 32px;
+	margin-bottom: 40px;
+	font-weight: 200;
+	line-height: 1.4;
+}
+
+.leftArrow .elementor-icon-list-item{
+	flex-direction: row-reverse;
+	justify-content: left;
+}
+
+.leftArrow .elementor-icon-list-item .elementor-icon-list-icon{
+	margin-left: 14px;
+}
+.leftArrow .elementor-icon-list-item .elementor-icon-list-text{
+	padding-left: 0px !important;
 }
