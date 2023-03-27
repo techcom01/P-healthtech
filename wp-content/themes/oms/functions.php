@@ -55,6 +55,7 @@ function oms_setup() {
 			'footer-3' => esc_html__( 'Footer3', 'oms' ),
 			'footer-4' => esc_html__( 'Footer4', 'oms' ),
 			'footer-5' => esc_html__( 'Footer5', 'oms' ),
+			'footer-6' => esc_html__( 'Mobile Footer', 'oms' ),
 		)
 	);
 

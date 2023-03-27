@@ -45,6 +45,7 @@
 							<p class="site-description"><?php echo $oms_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 							<?php endif; ?>
 						</div><!-- .site-branding -->
+						<div class="toggleButon"><hr></div>
 					</div>
 					<div class="col-md-9 d-flex justify-content-end">
 						<nav id="site-navigation" class="main-navigation">

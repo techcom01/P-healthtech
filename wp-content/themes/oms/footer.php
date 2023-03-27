@@ -11,13 +11,13 @@
 
 ?>
 
-<section class="footer-form content-padding">
+<section class="footer-form content-padding hide-mobile">
 	<div class="container">
 		<?php echo do_shortcode('[contact-form-7 id="62" title="Contact form"]'); ?>
 	</div>
 </section>
 
-<footer class="site-footer brand-bg-color">
+<footer class="site-footer brand-bg-color hide-mobile">
 	<div class="container">
 
 		<div class="row">
@@ -55,7 +55,37 @@
 	</div>
 </footer><!-- #colophon -->
 
+<section class="footer-form content-padding hide-desktop">
+	<div class="container">
+		<?php echo do_shortcode('[contact-form-7 id="3379" title="Contact form Mobile"]'); ?>
+	</div>
+</section>
+
+<footer class="site-footer brand-bg-color hide-desktop">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Quick links</h4>
+				<?php wp_nav_menu(array('theme_location' => 'footer-6'));?>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="footer-bottom hide-desktop">
+	<?php if( have_rows('footer_right_links', 'option') ): ?>
+	<ul class="footer-social">
+		<li><a href="#">Cookie Policy</a></li>
+		<?php while( have_rows('footer_right_links', 'option') ): the_row(); ?>
+		<li><a href="<?php the_sub_field('icon_link', 'option'); ?>"><?php the_sub_field('icon_select', 'option'); ?></a></li>
+		<?php endwhile; ?>
+	</ul>
+	<?php endif; ?>
+	<div class="copyRight"><?php the_field('footer_copyright', 'option'); ?></div>
+</div>
+
 <?php wp_footer(); ?>
+
 
 </body>
 </html>
